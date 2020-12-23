@@ -1,55 +1,61 @@
 import React from 'react';
 import './styles/header.css'
+import logo from './img/unnamed.png';
 
-export default function Header() {
-    return(
-        <header className={"header"}>
-            <div className={"header--top"}>
-                <div>
-                    <h1>Logo</h1>
+class Header extends React.Component {
+    render() {
+        return(
+            <header className={"header"}>
+                <div className={"header--top"}>
+                    <div className="logo--header">
+                        <a href="/"><img src={logo} className="logo" alt=""/></a>
+                        <a href="/actions1">Enviar a</a>
+                    </div>
+
+
+
+                    <form action="" className="header--form">
+                        <input type="text" name="buscar" />
+                    </form>
+
+                    <nav className={"header--nav"}>
+                        <ul>
+                            <li><a href="/perfil">Mi perfil</a></li>
+                            <li><a href="/envios">Envios y pedidos</a></li>
+                            <li><a href="/carrito">Cesta (0)</a></li>
+                        </ul>
+                    </nav>
                 </div>
 
-                <a href="">Enviar a</a>
-
-                <form action="">
-                    <input type="text" name="buscar" />
-                </form>
-
-                <nav className={"header--nav"}>
+                <div className={"header--bottom"}>
                     <ul>
-                        <li><a href="">Mi perfil</a></li>
-                        <li><a href="">Envios y pedidos</a></li>
-                        <li><a href="">Cesta (0)</a></li>
+                        <li><a href="/hamburguer" className={"header--bottom__link"}>TODO</a></li>
                     </ul>
-                </nav>
-            </div>
 
-            <div className={"header--bottom"}>
-                <ul>
-                    <li><a href="" className={"header--bottom__link"}>TODO</a></li>
-                </ul>
+                    <ul>
+                        <li><a href="/submenu">Ofertas de navidad</a></li>
+                        <li><a href="/submenu">Cheques regalo</a></li>
+                        <li><a href="/submenu">AmazonBasics</a></li>
+                        <li><a href="/submenu">Ideas para regalos</a></li>
+                        <li><a href="/submenu">Prime</a></li>
+                        <li><a href="/submenu">Amazon.es de XX</a></li>
+                        <li><a href="/submenu">Los Más Vendidos</a></li>
+                        <li><a href="/submenu">Atención al cliente</a></li>
+                        <li><a href="/submenu">Volver a comprar</a></li>
+                        <li><a href="/submenu">Últimas novedades</a></li>
+                    </ul>
 
-                <ul>
-                    <li><a href="">Ofertas de navidad</a></li>
-                    <li><a href="">Cheques regalo</a></li>
-                    <li><a href="">AmazonBasics</a></li>
-                    <li><a href="">Ideas para regalos</a></li>
-                    <li><a href="">Prime</a></li>
-                    <li><a href="">Amazon.es de XX</a></li>
-                    <li><a href="">Los Más Vendidos</a></li>
-                    <li><a href="">Atención al cliente</a></li>
-                    <li><a href="">Volver a comprar</a></li>
-                    <li><a href="">Últimas novedades</a></li>
-                </ul>
+                    <ul>
+                        <li>
+                            <a href="/submenu" className={"header--bottom__link"}>Audible</a>
+                        </li>
+                    </ul>
 
-                <ul>
-                    <li>
-                        <a href="" className={"header--bottom__link"}>Audible</a>
-                    </li>
-                </ul>
+                </div>
 
-            </div>
-
-        </header>
-    )
+            </header>
+        )
+    }
 }
+
+export default Header;
